@@ -8,7 +8,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "root": "apps/phc-portal",
             "outputPath": "dist/apps/phc-portal"
@@ -38,7 +40,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/phc-portal"],
+          "outputs": [
+            "coverage/apps/phc-portal"
+          ],
           "options": {
             "jestConfig": "apps/phc-portal/jest.config.js",
             "passWithNoTests": true
@@ -46,9 +50,13 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/phc-portal/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/phc-portal/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         }
       }
@@ -73,13 +81,20 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/phc-portal-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/phc-portal-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
-    }
+    },
+    "portal": "apps/portal",
+    "portal-e2e": "apps/portal-e2e",
+    "shared-ui-components": "libs/shared-ui-components"
   },
   "cli": {
     "defaultCollection": "@nrwl/next"
