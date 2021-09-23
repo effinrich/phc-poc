@@ -12,8 +12,6 @@ export function Index() {
    */
   return (
     <StyledPage>
-      
-      
     <h2>Resources &amp; Tools</h2>
     <p>
       Thank you for using and showing some ♥ for Nx.
