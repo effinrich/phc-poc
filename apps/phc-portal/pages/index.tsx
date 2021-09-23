@@ -1,9 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+
+import { YouTube } from '@phc/shared-ui-components'
 
 const StyledPage = styled.div`
   .page {
   }
-`;
+`
 
 export function Index() {
   /*
@@ -13,6 +15,7 @@ export function Index() {
    */
   return (
     <StyledPage>
+      <YouTube title={''} uid={''} />
       <h2>Resources &amp; Tools</h2>
       <p>Thank you for using and showing some ♥ for Nx.</p>
       <div className="flex github-star-container">
@@ -97,7 +100,7 @@ nx affected:e2e
 `}</pre>
       </details>
     </StyledPage>
-  );
+  )
 }
 
-export default Index;
+export default Index
