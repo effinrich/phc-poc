@@ -83,6 +83,32 @@
     "portal": "apps/portal",
     "portal-e2e": "apps/portal-e2e",
     "shared-ui-components": "libs/shared-ui-components",
+    "shared-ui-components-e2e": {
+      "root": "apps/shared-ui-components-e2e",
+      "sourceRoot": "apps/shared-ui-components-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/shared-ui-components-e2e/cypress.json",
+            "devServerTarget": "shared-ui-components:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "shared-ui-components:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/shared-ui-components-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "uui": "libs/uui"
   },
   "cli": {
