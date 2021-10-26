@@ -1,21 +1,19 @@
-FROM gcr.io/gcp-runtimes/ubuntu_20_0_4
+FROM alpine
 
-ARG DOCKER_VERSION=5:19.03.9~3-0~ubuntu-focal
+WORKDIR /app
 
-RUN apt-get -y update && \
-  apt-get -y install \
-  apt-transport-https \
-  ca-certificates \
-  curl \
-  make \
-  software-properties-common && \
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-  apt-key fingerprint 0EBFCD88 && \
-  add-apt-repository \
-  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) \
-  edge" && \
-  apt-get -y update && \
-  apt-get -y install docker-ce=${DOCKER_VERSION} docker-ce-cli=${DOCKER_VERSION}
+ENV PATH /app/node_modules/.bin:$PATH
+COPY package.json ./
+COPY yarn.lock ./
+RUN yarn install --frozen-lockfile
 
-ENTRYPOINT ["/usr/bin/docker"]
+COPY . ./
+RUN yarn build
+
+# production environment
+FROM nginx:stable-alpine
+COPY --from=build /app/dist/apps/portal /usr/share/nginx/html
+
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]
