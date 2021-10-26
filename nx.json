@@ -1,7 +1,7 @@
 {
   "npmScope": "phc",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "package.json": {
@@ -12,10 +12,9 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "NjMwODNiYzItMjE0Yy00MGJkLWIwZDktMGRiOWMwYThkNTEwfHJlYWQtd3JpdGU="
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -28,16 +27,12 @@
     ]
   },
   "projects": {
-    "phc-portal": {
+    "portal": {
       "tags": []
     },
-    "phc-portal-e2e": {
+    "portal-e2e": {
       "tags": [],
-      "implicitDependencies": ["phc-portal"]
-    },
-    "shared-ui-components-e2e": {
-      "tags": [],
-      "implicitDependencies": ["shared-ui-components"]
+      "implicitDependencies": ["portal"]
     }
   }
 }

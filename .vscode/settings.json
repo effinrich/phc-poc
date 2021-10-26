@@ -5,5 +5,18 @@
     "editor.lineHighlightBackground": "#1073cf2d",
     "editorBracketMatch.border": "#575B5F",
     "editor.lineHighlightBorder": "#9fced11f"
-  }
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "explorerExclude.backup": null
 }

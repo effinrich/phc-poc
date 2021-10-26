@@ -1,6 +1,6 @@
 
 
-# PHC POC
+# Phc
 
 This project was generated using [Nx](https://nx.dev).
 
