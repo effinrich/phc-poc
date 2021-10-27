@@ -1,0 +1,15 @@
+# [START cloudbuild_yarn_node]
+steps:
+# Install dependencies
+- name: node
+  entrypoint: yarn
+  args: ['install']
+# Run tests
+- name: node
+  entrypoint: yarn
+  args: ['test']
+# Run custom commands
+- name: node
+  entrypoint: yarn
+  args: ['build']
+# [END cloudbuild_yarn_node]
