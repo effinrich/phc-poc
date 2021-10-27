@@ -11,3 +11,6 @@ steps:
 - name: node
   entrypoint: yarn
   args: ['run', 'build']
+- name: node
+  entrypoint: yarn
+  args: ['build']
