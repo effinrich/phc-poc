@@ -1,18 +1,16 @@
 {
-  "user": {
+  "results": {
     "user": [
       { "userId": "userQueryStream" },
       { "userName": "sadako" },
       { "userType": "WINNER" }
     ],
-    "rankingDetails": null
-  },
-  "user2": {
-    "user": [
+    "rankingDetails": null,
+    "user2": [
       { "userId": "userQueryStream" },
       { "userName": "clatko" },
       { "userType": "LOSER" }
     ],
-    "rankingDetails": null
+    "rankingDetails2": null
   }
 }
