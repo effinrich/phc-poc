@@ -1,5 +1,5 @@
 {
-  "0": {
+  "user": {
     "user": {
       "userId": "userQueryStream",
       "userName": "sadako",
@@ -7,7 +7,7 @@
     },
     "rankingDetails": null
   },
-  "1": {
+  "user2": {
     "user": {
       "userId": "userQueryStream",
       "userName": "clatko",
