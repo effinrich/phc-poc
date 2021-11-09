@@ -1,22 +1,18 @@
 {
-  "success": true,
-  "message": "Users fetched successfully",
-  "data": {
-    "0": {
-      "user": {
-        "userId": "userQueryStream",
-        "userName": "sadako",
-        "userType": "WINNER"
-      },
-      "rankingDetails": null
+  "0": {
+    "user": {
+      "userId": "userQueryStream",
+      "userName": "sadako",
+      "userType": "WINNER"
     },
-    "1": {
-      "user": {
-        "userId": "userQueryStream",
-        "userName": "clatko",
-        "userType": "LOSER"
-      },
-      "rankingDetails": null
-    }
+    "rankingDetails": null
+  },
+  "1": {
+    "user": {
+      "userId": "userQueryStream",
+      "userName": "clatko",
+      "userType": "LOSER"
+    },
+    "rankingDetails": null
   }
 }
